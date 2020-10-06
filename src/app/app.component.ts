@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'galeria-fotos';
+  titulo = 'Cachorros';
+  fotos = [
+    '../assets/dogs/1.jpg',
+    '../assets/dogs/2.jpg',
+    '../assets/dogs/3.jpg',
+    '../assets/dogs/4.jpg',
+    '../assets/dogs/5.jpg',
+    '../assets/dogs/6.jpg',
+  ];
 }

@@ -1,0 +1,14 @@
+img {
+    max-width: 500px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    flex-direction: row;
+}
