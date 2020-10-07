@@ -1,11 +1,16 @@
 <div class="container">
     <h3>Fotos de {{titulo}}</h3>
-    <img src="../../assets/dogs/1.jpg">
-    <div class="buttons">
-        <p>Foto 1 de 6</p>
-        <button>|<</button>
-        <button><</button>
-        <button>></button>
-        <button>>|</button>
-    </div>
+    <ng-container *ngIf="fotos">
+        <img [src]="fotoAtual">
+        <p>Foto {{status}}</p>
+        <div class="buttons">
+            <button (click)="primeiraFoto()" [disabled]="index<=0">|<</button>
+            <button><</button>
+            <button>></button>
+            <button>>|</button>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="!fotos">
+        <p>Nenhuma foto.</p>
+    </ng-container>
 </div>
