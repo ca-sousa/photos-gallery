@@ -7,7 +7,7 @@
             <button (click)="primeiraFoto()" [disabled]="index<=0">&lt;&lt;</button>
             <button (click)="fotoAnterior()" [disabled]="index<=0">&lt;</button>
             <button (click)="proximaFoto()" [disabled]="index>=fotos.length-1">&gt;</button>
-            <button (click)="ultimaFoto()" [disabled]="index>=fotos.length-1">&gt;</button>
+            <button (click)="ultimaFoto()" [disabled]="index>=fotos.length-1">&gt;&gt;</button>
         </div>
     </div>
     <ng-container *ngIf="fotos.length <= 1">
