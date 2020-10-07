@@ -28,10 +28,18 @@ export class GaleriaComponentComponent implements OnInit{
   ultimaFoto() {
     this.index = this.fotos.length-1;
     this.fotoAtual = this.fotos[this.index];
-    this.status = `${this.index + 1} de ${this.fotos.length}`
+    this.status = `${this.index + 1} de ${this.fotos.length}`;
   }
 
   fotoAnterior() {
     this.index --;
+    this.fotoAtual = this.fotos[this.index];
+    this.status = `${this.index + 1} de ${this.fotos.length}`;
+  }
+  
+  proximaFoto() {
+    this.index ++;
+    this.fotoAtual = this.fotos[this.index];
+    this.status = `${this.index + 1} de ${this.fotos.length}`
   }
 }

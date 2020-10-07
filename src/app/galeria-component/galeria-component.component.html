@@ -5,8 +5,8 @@
         <p>Foto {{status}}</p>
         <div class="buttons">
             <button (click)="primeiraFoto()" [disabled]="index<=0">|<</button>
-            <button><</button>
-            <button>></button>
+            <button (click)="fotoAnterior()" [disabled]="index<=0"><</button>
+            <button (click)="proximaFoto()" [disabled]="index>=fotos.length-1">></button>
             <button (click)="ultimaFoto()" [disabled]="index>=fotos.length-1">>|</button>
         </div>
     </ng-container>
