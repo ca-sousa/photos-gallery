@@ -8,8 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GaleriaComponentComponent implements OnInit{
   ngOnInit(): void {
     this.index = 0;
-    this.fotoAtual = this.fotos[this.index]
-    this.status = `${this.index + 1} de ${this.fotos.length}`
+    this.fotoAtual = this.fotos[this.index];
+    this.status = `${this.index + 1} de ${this.fotos.length}`;
   }
 
   @Input() titulo: string;
@@ -21,7 +21,17 @@ export class GaleriaComponentComponent implements OnInit{
 
   primeiraFoto() {
     this.index = 0;
-    this.fotoAtual = this.fotos[this.index]
+    this.fotoAtual = this.fotos[this.index];
+    this.status = `${this.index + 1} de ${this.fotos.length}`;
+  }
+
+  ultimaFoto() {
+    this.index = this.fotos.length-1;
+    this.fotoAtual = this.fotos[this.index];
     this.status = `${this.index + 1} de ${this.fotos.length}`
+  }
+
+  fotoAnterior() {
+    this.index --;
   }
 }
