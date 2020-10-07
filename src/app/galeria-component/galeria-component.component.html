@@ -1,16 +1,16 @@
 <div class="container">
     <h3>Fotos de {{titulo}}</h3>
-    <ng-container *ngIf="fotos">
+    <div *ngIf="fotos.length >= 1">
         <img [src]="fotoAtual">
-        <p>Foto {{status}}</p>
         <div class="buttons">
-            <button (click)="primeiraFoto()" [disabled]="index<=0">|<</button>
-            <button (click)="fotoAnterior()" [disabled]="index<=0"><</button>
-            <button (click)="proximaFoto()" [disabled]="index>=fotos.length-1">></button>
-            <button (click)="ultimaFoto()" [disabled]="index>=fotos.length-1">>|</button>
+            <p>Foto {{status}}</p>
+            <button (click)="primeiraFoto()" [disabled]="index<=0">&lt;&lt;</button>
+            <button (click)="fotoAnterior()" [disabled]="index<=0">&lt;</button>
+            <button (click)="proximaFoto()" [disabled]="index>=fotos.length-1">&gt;</button>
+            <button (click)="ultimaFoto()" [disabled]="index>=fotos.length-1">&gt;</button>
         </div>
-    </ng-container>
-    <ng-container *ngIf="!fotos">
+    </div>
+    <ng-container *ngIf="fotos.length <= 1">
         <p>Nenhuma foto.</p>
     </ng-container>
 </div>

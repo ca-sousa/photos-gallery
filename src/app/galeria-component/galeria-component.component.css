@@ -1,14 +1,25 @@
 img {
     max-width: 500px;
+    max-height: 500px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 .buttons {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+
+.buttons button {
+    width: 40px;
+    height: 20px;
+    margin: 3.5% 0 0 2%;
+}
+.buttons p {
+margin-right: 3%;
 }
